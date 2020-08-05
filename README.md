@@ -6,3 +6,4 @@ conversion of entity experiment to see how it can be simplified
 
 1. scaffold workspace with app
 2. scaffold root state
+3. ng add @ngrx/data

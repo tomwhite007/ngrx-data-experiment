@@ -6,6 +6,8 @@ import { StoreModule } from '@ngrx/store';
 import { EffectsModule } from '@ngrx/effects';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { environment } from '../environments/environment';
+import { EntityDataModule } from '@ngrx/data';
+import { entityConfig } from './entity-metadata';
 
 @NgModule({
   declarations: [AppComponent],
@@ -23,6 +25,7 @@ import { environment } from '../environments/environment';
     ),
     EffectsModule.forRoot([]),
     !environment.production ? StoreDevtoolsModule.instrument() : [],
+    EntityDataModule.forRoot(entityConfig),
   ],
   providers: [],
   bootstrap: [AppComponent],
