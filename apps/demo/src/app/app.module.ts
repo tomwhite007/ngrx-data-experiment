@@ -7,7 +7,8 @@ import { EffectsModule } from '@ngrx/effects';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { environment } from '../environments/environment';
 import { EntityDataModule } from '@ngrx/data';
-import { entityConfig } from './entity-metadata';
+import { entityConfig } from './+state/entity-metadata';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [AppComponent],
@@ -26,6 +27,7 @@ import { entityConfig } from './entity-metadata';
     EffectsModule.forRoot([]),
     !environment.production ? StoreDevtoolsModule.instrument() : [],
     EntityDataModule.forRoot(entityConfig),
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
