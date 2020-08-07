@@ -9,6 +9,7 @@ import { environment } from '../environments/environment';
 import { EntityDataModule } from '@ngrx/data';
 import { entityConfig } from './+state/entity-metadata';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [AppComponent],
@@ -28,6 +29,7 @@ import { HttpClientModule } from '@angular/common/http';
     !environment.production ? StoreDevtoolsModule.instrument() : [],
     EntityDataModule.forRoot(entityConfig),
     HttpClientModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

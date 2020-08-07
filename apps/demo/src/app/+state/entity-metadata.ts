@@ -1,7 +1,11 @@
 import { EntityMetadataMap, EntityDataModuleConfig } from '@ngrx/data';
 
 const entityMetadata: EntityMetadataMap = {
-  Book: {},
+  Book: {
+    additionalCollectionState: {
+      selectedId: 'test',
+    },
+  },
 };
 
 const pluralNames = {};
