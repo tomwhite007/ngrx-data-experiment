@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Dictionary } from '@ngrx/entity';
 import { BookStateService } from './+state/book-state.service';
+import { Book } from './shared/interfaces/book.interface';
 
 @Component({
   selector: 'ngrx-data-experiment-root',
@@ -10,7 +11,7 @@ import { BookStateService } from './+state/book-state.service';
 })
 export class AppComponent implements OnInit {
   title = 'demo';
-  entities$; //: Observable<Dictionary<DummyEntity>>;
+  entities$: Observable<Book[]>;
   selected$; // : Observable<DummyEntity>;
   counter = 0;
   inputId: string;
